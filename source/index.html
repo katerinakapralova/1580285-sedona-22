@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -47,7 +48,7 @@
     </div>
   </header>
   <main class="page-main">
-    <h2 class="page-main__title">Седона - небольшой <br>городок в Аризоне,<br> Заслуживающий большего!</h2>
+    <h2 class="page-main__title">Седона - небольшой городок в Аризоне,<br> Заслуживающий большего!</h2>
     <p class="page-main__text">Рассмотрим 5 причин, по которым Cедона круче чем гранд каньон!</p>
     <section class="advantages">
       <div class="advantages__wrapper">
@@ -80,27 +81,29 @@
           </div>
         </div>
         <div class="advantages__item advantages__item--photo">
-          <div class="advantages__item advantages__item--inner">
+          <div class="advantages__item advantages__item--inner advantages__item--position">
             <h3 class="advantages__title">Там есть мост дьявола</h3>
             <p class="advantages__number">-№2-</p>
             <p class="advantages__description">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
           </div>
           <img class="advantages__img" src="img/photo-bridge-mobile.jpg" width="320" height="260" alt="мост Дьявола»">
         </div>
-        <div class="advantages__item">
-          <h3 class="advantages__title">Небольшая площадь</h3>
-          <p class="advantages__number">-№3-</p>
-          <p class="advantages__description">Все интересные места находятся<br> очень близко</p>
-        </div>
-        <div class="advantages__item">
-          <h3 class="advantages__title">Красивая дорога</h3>
-          <p class="advantages__number">-№4-</p>
-          <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
-        </div>
-        <div class="advantages__item">
-          <h3 class="advantages__title">Мало туристов</h3>
-          <p class="advantages__number">-№5-</p>
-          <p class="advantages__description">Большинство едет в Гранд Каньон и<br> толпится там</p>
+        <div class="advantages__row">
+          <div class="advantages__item">
+            <h3 class="advantages__title">Небольшая площадь</h3>
+            <p class="advantages__number">-№3-</p>
+            <p class="advantages__description">Все интересные места находятся<br> очень близко</p>
+          </div>
+          <div class="advantages__item">
+            <h3 class="advantages__title">Красивая дорога</h3>
+            <p class="advantages__number">-№4-</p>
+            <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+          </div>
+          <div class="advantages__item">
+            <h3 class="advantages__title">Мало туристов</h3>
+            <p class="advantages__number">-№5-</p>
+            <p class="advantages__description">Большинство едет в Гранд Каньон и<br> толпится там</p>
+          </div>
         </div>
       </div>
     </section>
@@ -113,7 +116,7 @@
         <a class="button" href="#">Найти гостиницу</a>
       </div>
       <div class="booking__map">
-        <iframe
+        <iframe class="booking__map booking__map--content"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6288757.523074388!2d-114.81097612959994!3d34.18228101474523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1617817152849!5m2!1sru!2sru"
           width="320" height="350" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </div>

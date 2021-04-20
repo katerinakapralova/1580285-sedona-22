@@ -2,14 +2,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.page-header__logo {
+  height: 84px;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    height: 96px;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .page-header__logo {
+    order: 1;
+  }
+
+  .page-header__caption {
+    order: 2;
+  }
 }
 
 .page-header__caption {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  height: 389px;
+  background-position: center;
+  height: 100%;
+  background-size: 100%;
 }
 
-.page-header__title {
-  margin: 0;
+@media (min-width: @tablet-width) {
+  .page-header__caption {
+    height: 518px;
+  }
 }

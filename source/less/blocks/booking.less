@@ -8,7 +8,7 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: @gray-darken;
+  color: @gray-darkest;
 }
 
 .booking__title {
@@ -21,4 +21,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .booking__wrapper {
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  .booking__map--content {
+    width: 100%;
+    max-width: 1200px;
+  }
 }

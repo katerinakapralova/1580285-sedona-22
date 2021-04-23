@@ -1,10 +1,22 @@
 .review-impression {
+  display: flex;
+  flex-direction: column;
   border: none;
   border-bottom: 1px solid @gray;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .review-impression {
+    flex-grow: 1;
+    order: 1;
+  }
 }
 
 .review-impression__list {
+  text-align: center;
   list-style: none;
+  padding: 0;
 }
 
 .review-impression__label {

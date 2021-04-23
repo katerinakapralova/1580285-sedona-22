@@ -1,8 +1,26 @@
 .user-info {
-  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
+  border: none;
   border-bottom: 1px solid @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .user-info {
+    flex-grow: 1;
+    order: 2;
+  }
+}
+
+.user-info__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .user-info__label {
@@ -31,3 +49,4 @@
 .user-info__input::-webkit-input-placeholder {
   color: @black;
 }
+

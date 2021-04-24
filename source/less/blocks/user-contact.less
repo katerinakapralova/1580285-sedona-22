@@ -1,6 +1,40 @@
 .user-contact {
+  display: flex;
+  flex-direction: column;
   border: none;
   border-bottom: 1px solid @gray;
+  padding: 0;
+}
+
+.user-contact__content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .user-contact {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user-contact__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .user-contact__input {
+    margin-left: 22px;
+  }
 }
 
 .user-contact__label {

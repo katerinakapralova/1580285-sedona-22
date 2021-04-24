@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,22 +19,22 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="#">
+            <a class="site-list__link" href="#">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">
+            <a class="site-list__link" href="photo.html">
               Фото и видео
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">
+            <a class="site-list__link" href="form.html">
               Форма отзыва
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#">
+            <a class="site-list__link" href="#">
               HTML ACADEMY
             </a>
           </li>
@@ -55,42 +56,54 @@
             посещенных вами<br> достопримечательностях</p>
         </header>
         <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="user-info">
-            <legend class="user-info__title form__subtitle">Представьтесь:</legend>
-            <label for="name" class="user-info__label">Имя:</label>
-            <input type="text" id="name" required placeholder="Петр" class="user-info__input" />
-            <label for="name" class="user-info__label">Фамилия:</label>
-            <input type="text" id="surname" required placeholder="Иванов" class="user-info__input" />
-            <label for="name" class="user-info__label">Очество:</label>
-            <input type="text" id="patronymic" placeholder="Александрович" class="user-info__input" />
-          </fieldset>
-          <fieldset class="user-contact">
-            <legend class="user-contact__title form__subtitle">Контактная информация:</legend>
-            <label for="telephone" class="user-contact__label">Телефон:</label>
-            <input type="text" id="telephone" required placeholder="Введите телефон" class="user-contact__input" />
-            <label for="email" class="user-contact__label">Электронная почта:</label>
-            <input type="text" id="email" required placeholder="Введите e-mail" class="user-contact__input" />
-          </fieldset>
-          <fieldset class="review-impression">
-            <legend class="review-impression__title form__subtitle">Ваше oбщее впечатление:</legend>
-            <ul class="review-impression__list">
-              <li class="review-impression__item">
-                <input class="review-impression__input" type="radio" name="review-positive"
-                  id="review-impression-positive" checked>
-                <label for="review-impression-positive" class="review-impression__label">Скорее положительное</label>
-              </li>
-              <li class="review-impression__item">
-                <input class="review-impression__input" type="radio" name="review-negative"
-                  id="review-impression-negative">
-                <label for="review-impression-negative" class="review-impression__label">Скорее отрицательное</label>
-              </li>
-              <li class="review-impression__item">
-                <input class="review-impression__input" type="radio" name="review-not-sure"
-                  id="review-impression-not-sure">
-                <label for="review-impression-not-sure" class="review-impression__label">Затрудняюсь ответить</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="form__row">
+            <fieldset class="user-info">
+              <legend class="user-info__title form__subtitle">Представьтесь:</legend>
+              <div class="user-info__content">
+                <label for="name" class="user-info__label">Имя<sup>*</sup>:</label>
+                <input type="text" id="name" required placeholder="Петр" class="user-info__input" />
+              </div>
+              <div class="user-info__content">
+                <label for="name" class="user-info__label">Фамилия<sup>*</sup>:</label>
+                <input type="text" id="surname" required placeholder="Иванов" class="user-info__input" />
+              </div>
+              <div class="user-info__content">
+                <label for="name" class="user-info__label">Очество:</label>
+                <input type="text" id="patronymic" placeholder="Александрович" class="user-info__input" />
+              </div>
+            </fieldset>
+            <fieldset class="user-contact">
+              <legend class="user-contact__title form__subtitle">Контактная информация:</legend>
+              <div class="user-contact__content">
+                <label for="telephone" class="user-contact__label">Телефон<sup>*</sup>:</label>
+                <input type="text" id="telephone" required placeholder="Введите телефон" class="user-contact__input" />
+              </div>
+              <div class="user-contact__content">
+                <label for="email" class="user-contact__label">Электронная почта<sup>*</sup>:</label>
+                <input type="text" id="email" required placeholder="Введите e-mail" class="user-contact__input" />
+              </div>
+            </fieldset>
+            <fieldset class="review-impression">
+              <legend class="review-impression__title form__subtitle">Ваше oбщее впечатление:</legend>
+              <ul class="review-impression__list">
+                <li class="review-impression__item">
+                  <input class="review-impression__input" type="radio" name="review-positive"
+                    id="review-impression-positive" checked>
+                  <label for="review-impression-positive" class="review-impression__label">Скорее положительное</label>
+                </li>
+                <li class="review-impression__item">
+                  <input class="review-impression__input" type="radio" name="review-negative"
+                    id="review-impression-negative">
+                  <label for="review-impression-negative" class="review-impression__label">Скорее отрицательное</label>
+                </li>
+                <li class="review-impression__item">
+                  <input class="review-impression__input" type="radio" name="review-not-sure"
+                    id="review-impression-not-sure">
+                  <label for="review-impression-not-sure" class="review-impression__label">Затрудняюсь ответить</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="review-attraction">
             <legend class="review-attraction__title form__subtitle">Посещенные достопримечательности:</legend>
             <ul class="review-attraction__list">
@@ -122,7 +135,9 @@
           </fieldset>
           <div class="form-footer">
             <input type="submit" class="form-footer__button" value="Отправить отзыв" />
+            <p class="form-footer__legend">* — обязательные поля</p>
           </div>
+
         </form>
       </div>
     </section>

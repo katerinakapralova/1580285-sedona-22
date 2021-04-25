@@ -3,9 +3,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
 }
 
 .photo__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   border-bottom: 1px solid @gray;
   padding: 20px;
   margin: 0;
@@ -30,6 +34,19 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  flex-grow: 1;
+}
+
+.photo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 11px 0 13px;
+}
+
+.photo__name {
+  padding: 0;
+  margin: 0;
 }
 
 .photo__author {
@@ -37,4 +54,102 @@
   color: @gray-darkest;
   text-transform: none;
   margin: 0;
+  padding: 0;
+}
+
+.photo__like {
+  margin: 0;
+  padding: 0 0 15px 37px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .photo__wrapper {
+    padding: 0 60px;
+    margin: auto;
+    max-width: 1199px;
+  }
+
+  .photo__header {
+    width: 100%;
+  }
+
+  .photo__gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &.photo__item--first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .photo__item {
+    flex-grow: 1;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .photo__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .photo__title {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @gray-lightest;
+    flex-wrap: wrap;
+  }
+
+  .photo__title--color {
+    background-color: @gray-lighten;
+  }
+
+  .photo__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 22px 0 15px 20px;
+  }
+
+  .photo__like {
+    margin: 0;
+    padding: 0 20px 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__wrapper {
+    padding: 0 120px;
+  }
+
+  .photo__gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &.photo__item--first {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .photo__item {
+    position: relative;
+  }
+
+  .photo__title {
+    color: @white;
+    background-color: @black-opacity-30;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .photo__author {
+    color: @white;
+  }
 }

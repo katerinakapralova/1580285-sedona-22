@@ -16,3 +16,32 @@
   line-height: 24px;
   color: @gray-darkest;
 }
+
+@media (min-width: @tablet-width) {
+  .presentation__wrapper {
+    padding: 0 60px;
+    margin: auto;
+    max-width: 1199px;
+  }
+
+  .presentation__header {
+    width: 100%;
+  }
+
+  .presentation__video {
+    width: 100%;
+  }
+
+  .presentation__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .presentation__wrapper {
+    padding: 0 200px;
+    margin: auto;
+  }
+}

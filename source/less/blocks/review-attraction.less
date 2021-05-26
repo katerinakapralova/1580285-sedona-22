@@ -1,34 +1,28 @@
 .review-attraction {
   border: none;
   border-bottom: 1px solid @gray;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  text-align: center;
   padding: 0;
+  margin: 0;
 }
-
-@media (min-width: @tablet-width) {
-  .review-attraction {
-    flex-direction: column;
-  }
-
-  .review-attraction__list {
-    display: grid;
-    grid-gap: 62px;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .review-attraction__list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
 
 .review-attraction__list {
   list-style: none;
   padding: 0;
+  text-align: start;
+  margin: 0;
+}
+
+.review-attraction__item {
+  padding: 13px 0 40px 0;
+}
+
+.review-attraction__title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 20px;
 }
 
 .review-attraction__label {
@@ -37,4 +31,83 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: none;
+  padding: 0 0 0 78px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.review-attraction__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -14px;
+  width: 48px;
+  height: 48px;
+  border: 5px solid @gray-lightest;
+  background-color: @gray-lightest;
+  border-radius: 5px;
+}
+
+.review-attraction__label:hover::before {
+  border-color: @gray;
+  background-color: @gray;
+}
+
+.review-attraction__label:active::before {
+  border-color: @gray-dark;
+  background-color: @gray-dark;
+}
+
+.review-attraction__input:checked + .review-attraction__label::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 23px;
+  height: 16px;
+  background-image: url("../img/ikon-checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.review-attraction__input:checked + .review-attraction__label:hover::after {
+  opacity: 1;
+}
+
+.review-attraction__input:checked + .review-attraction__label:active::after {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .review-attraction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid @gray;
+    border-bottom: none;
+  }
+
+  .review-attraction__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 62px;
+    margin: 25px 0 40px 0;
+  }
+
+  .review-attraction__item {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-attraction__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 26px 0 23px 0;
+    gap: 43px;
+  }
 }

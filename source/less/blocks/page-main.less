@@ -1,10 +1,12 @@
 .page-main__title {
+  display: block;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
-  margin: 0;
+  margin: 32px auto 30px auto;
   padding: 0;
+  width: 260px;
 }
 
 .page-main__text {
@@ -13,6 +15,19 @@
   font-weight: 400;
   color: @gray-darkest;
   text-align: center;
-  margin: 0;
+  margin: 0 auto 38px auto;
   padding: 0;
+  width: 260px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__title {
+    width: 520px;
+    margin: 38px auto 40px auto;
+  }
+
+  .page-main__text {
+    width: 520px;
+    margin: 0 auto 52px auto;
+  }
 }

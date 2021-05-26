@@ -1,4 +1,37 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 26px 0;
+}
+
 .copyright__text {
   font-size: 14px;
   line-height: 26px;
+  font-weight: 400;
+  margin: 0 12px 0 0;
+}
+
+.copyright__link .copyright__icon {
+  fill: @black;
+}
+
+.copyright__link .copyright__icon:hover {
+  fill: @blue-lighten;
+}
+
+.copyright__link .copyright__icon:active {
+  fill: @black-opacity-30;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin: 0 60px 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    margin: 0 120px 0 0;
+  }
 }
